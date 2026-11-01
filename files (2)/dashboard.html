@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — NEUST UniQueue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dash-shell">
+  <aside class="dash-side">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">N</span>
+      <span>NEUST UniQueue<span class="sub">Queue System</span></span>
+    </a>
+    <button class="dash-menu-toggle" id="dashMenuToggle" type="button" aria-expanded="false" aria-controls="dashNav">
+      <span aria-hidden="true">&#9776;</span> Menu
+    </button>
+    <ul class="dash-nav" id="dashNav">
+      <li>
+          <button class="active" data-view="viewProfile"><span class="ico">&#9679;</span> Profile</button>
+      </li>
+      <li>
+        <button data-view="viewId"><span class="ico">&#9635;</span> School ID</button>
+      </li>
+      <li>
+        <button data-view="viewRequest"><span class="ico">&#9998;</span> Request Document</button>
+      </li>
+      <li>
+        <button data-view="viewSchedule"><span class="ico">&#9783;</span> Schedule Calendar</button>
+      </li>
+      <li>
+        <button data-view="viewReceipts"><span class="ico">&#8801;</span> Receipts</button>
+      </li>
+    </ul>
+    <div class="dash-user">
+      <div class="avatar">J</div>
+      <div>
+        <strong>Juan dela Cruz</strong>
+        <span>2024-00123 &middot; BSIT 2</span>
+      </div>
+    </div>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-top">
+      <h1 id="dashTitle">Profile</h1>
+      <div class="queue-badge">
+        <span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--green)"></span> Now serving <span class="num" data-queue-now>047</span>
+      </div>
+    </div>
+    <section class="dash-view active" id="viewProfile">
+      <div class="card info-card">
+        <div class="info-card-head">
+          <div class="avatar">J</div>
+          <div>
+            <h2>Juan dela Cruz</h2>
+            <p>2nd Year &middot; BSIT &middot; <span class="badge badge-green">Active Enrollment</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="padding:26px 28px">
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <caption>Personal profile</caption>
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>Full name</td>
+                  <td>Juan Miguel dela Cruz</td>
+              </tr>
+              <tr>
+                  <td>Student ID</td>
+                  <td>2024-00123</td>
+              </tr>
+              <tr>
+                  <td>Program</td>
+                  <td>BS Information Technology</td>
+              </tr>
+              <tr>
+                  <td>Year level</td>
+                  <td>2nd Year</td>
+              </tr>
+              <tr>
+                  <td>Section</td>
+                  <td>BSIT 2-A</td>
+              </tr>
+              <tr>
+                  <td>Email</td>
+                  <td>jm.delacruz@uni.edu.ph</td>
+              </tr>
+              <tr>
+                  <td>Contact no.</td>
+                  <td>0917-555-8821</td>
+              </tr>
+              <tr>
+                  <td>Date of birth</td>
+                  <td>March 14, 2005</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="dash-view" id="viewId">
+      <div class="id-card">
+        <div class="id-top">
+          <span class="brand-mark">N</span>
+          <div>
+            <strong>Nueva Ecija University of Science and Technology</strong>
+            <small>Sumacab Main Campus</small>
+          </div>
+        </div>
+        <div class="id-body">
+          <div class="avatar id-photo ph" data-label=""><img src="images/student-photo.jpg" alt="" onerror="this.remove()">J</div>
+          <div>
+            <h3>Juan Miguel dela Cruz</h3>
+            <p>BS Information Technology</p>
+          </div>
+        </div>
+        <div class="id-strip">
+          <span>2024-00123</span>
+          <span>Valid until May 2028</span>
+        </div>
+        <div class="id-barcode">
+          <svg viewBox="0 0 300 40" preserveAspectRatio="none">
+            <rect x="0" y="0" width="2" height="40" fill="currentColor"/>
+            <rect x="5" y="0" width="1" height="40" fill="currentColor"/>
+            <rect x="9" y="0" width="3" height="40" fill="currentColor"/>
+            <rect x="15" y="0" width="1" height="40" fill="currentColor"/>
+            <rect x="19" y="0" width="2" height="40" fill="currentColor"/>
+            <rect x="24" y="0" width="1" height="40" fill="currentColor"/>
+            <rect x="28" y="0" width="4" height="40" fill="currentColor"/>
+            <rect x="35" y="0" width="1" height="40" fill="currentColor"/>
+            <rect x="39" y="0" width="2" height="40" fill="currentColor"/>
+            <rect x="44" y="0" width="1" height="40" fill="currentColor"/>
+            <rect x="48" y="0" width="3" height="40" fill="currentColor"/>
+            <rect x="54" y="0" width="1" height="40" fill="currentColor"/>
+            <rect x="58" y="0" width="2" height="40" fill="currentColor"/>
+            <rect x="63" y="0" width="1" height="40" fill="currentColor"/>
+            <rect x="67" y="0" width="4" height="40" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+      <p style="margin-top:16px;font-size:.84rem;color:var(--text-mute)">Digital ID for Registrar use only.</p>
+    </section>
+    <section class="dash-view" id="viewRequest">
+      <div class="stepper">
+        <div class="step current"><span class="circle">1</span> Document</div>
+        <div class="step-line"></div>
+        <div class="step"><span class="circle">2</span> Schedule</div>
+        <div class="step-line"></div>
+        <div class="step"><span class="circle">3</span> Payment</div>
+        <div class="step-line"></div>
+        <div class="step"><span class="circle">4</span> Done</div>
+      </div>
+      <div class="request-step active" id="reqStep1">
+        <div class="card table-card">
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <caption>Choose a document</caption>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Document</th>
+                  <th class="num">Fee</th>
+                  <th>Processing time</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Code"><span class="badge badge-mute">COG</span></td>
+                  <td data-label="Document">Certificate of Grades</td>
+                  <td class="num" data-label="Fee">&#8369;50.00</td>
+                  <td data-label="Processing time">3 days</td>
+                  <td class="doc-row-btn" data-label="Action"><button class="btn btn-solid btn-sm" data-doc-select data-doc-name="Certificate of Grades" data-doc-fee="50" data-doc-processing="3 days">Select</button></td>
+                </tr>
+                <tr>
+                  <td data-label="Code"><span class="badge badge-mute">COR</span></td>
+                  <td data-label="Document">Certificate of Registration</td>
+                  <td class="num" data-label="Fee">&#8369;50.00</td>
+                  <td data-label="Processing time">1 day</td>
+                  <td class="doc-row-btn" data-label="Action"><button class="btn btn-solid btn-sm" data-doc-select data-doc-name="Certificate of Registration" data-doc-fee="50" data-doc-processing="1 day">Select</button></td>
+                </tr>
+                <tr>
+                  <td data-label="Code"><span class="badge badge-mute">TOR</span></td>
+                  <td data-label="Document">Transcript of Records</td>
+                  <td class="num" data-label="Fee">&#8369;150.00</td>
+                  <td data-label="Processing time">5 days</td>
+                  <td class="doc-row-btn" data-label="Action"><button class="btn btn-solid btn-sm" data-doc-select data-doc-name="Transcript of Records" data-doc-fee="150" data-doc-processing="5 days">Select</button></td>
+                </tr>
+                <tr>
+                  <td data-label="Code"><span class="badge badge-mute">CERT</span></td>
+                  <td data-label="Document">Certificate of Enrollment</td>
+                  <td class="num" data-label="Fee">&#8369;50.00</td>
+                  <td data-label="Processing time">1 day</td>
+                  <td class="doc-row-btn" data-label="Action"><button class="btn btn-solid btn-sm" data-doc-select data-doc-name="Certificate of Enrollment" data-doc-fee="50" data-doc-processing="1 day">Select</button></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4">Rush processing is not available online</td>
+                  <td></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="request-step" id="reqStep2">
+        <div class="card" style="padding:26px 28px">
+          <div id="scheduleDocSummary" style="margin-bottom:20px;padding:14px 16px;background:var(--surface-2);border-radius:var(--radius-sm)"></div>
+          <h3 style="font-size:.95rem;margin-bottom:12px">Pick-up date</h3>
+          <div class="slot-grid">
+            <div class="slot-card" data-slot-date="Mon, Jul 28">
+              <strong>Mon</strong><span>Jul 28 &middot; 8 slots</span>
+            </div>
+            <div class="slot-card" data-slot-date="Tue, Jul 29">
+              <strong>Tue</strong><span>Jul 29 &middot; 12 slots</span>
+            </div>
+            <div class="slot-card" data-slot-date="Wed, Jul 30">
+              <strong>Wed</strong><span>Jul 30 &middot; 5 slots</span>
+            </div>
+            <div class="slot-card" data-slot-date="Thu, Jul 31">
+              <strong>Thu</strong><span>Jul 31 &middot; 14 slots</span>
+            </div>
+            <div class="slot-card" data-slot-date="Fri, Aug 1">
+              <strong>Fri</strong><span>Aug 1 &middot; 9 slots</span>
+            </div>
+          </div>
+          <h3 style="font-size:.95rem;margin-bottom:12px">Pick-up time</h3>
+          <div class="time-grid">
+            <div class="time-card" data-slot-time="08:00 AM">
+              <strong>08:00 AM</strong><span>4 booked</span>
+            </div>
+            <div class="time-card" data-slot-time="09:00 AM">
+              <strong>09:00 AM</strong><span>6 booked</span>
+            </div>
+            <div class="time-card" data-slot-time="10:00 AM">
+              <strong>10:00 AM</strong><span>2 booked</span>
+            </div>
+            <div class="time-card" data-slot-time="11:00 AM">
+              <strong>11:00 AM</strong><span>5 booked</span>
+            </div>
+            <div class="time-card" data-slot-time="01:00 PM">
+              <strong>01:00 PM</strong><span>7 booked</span>
+            </div>
+            <div class="time-card" data-slot-time="02:00 PM">
+              <strong>02:00 PM</strong><span>3 booked</span>
+            </div>
+            <div class="time-card" data-slot-time="03:00 PM">
+              <strong>03:00 PM</strong><span>1 booked</span>
+            </div>
+          </div>
+          <p id="scheduleWarning" style="display:none;color:var(--red);font-size:.85rem;margin-bottom:14px">Please choose a pick-up date and time before continuing.</p>
+          <button class="btn btn-primary" id="toPaymentBtn">Continue to Payment</button>
+        </div>
+      </div>
+      <div class="request-step" id="reqStep3">
+        <div class="card" style="padding:26px 28px">
+          <div class="data-table-wrap" style="margin-bottom:24px">
+            <table class="data-table">
+              <caption>Order summary</caption>
+              <tbody>
+                <tr>
+                  <td id="paySummaryDoc">Certificate of Grades</td>
+                  <td class="num" id="paySummaryFee">&#8369;50.00</td>
+                </tr>
+                <tr>
+                  <td>Processing fee</td>
+                  <td class="num">&#8369;0.00</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Total &middot; <span id="paySummaryWhen"></span></td>
+                  <td class="num" id="paySummaryTotal">&#8369;50.00</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <h3 style="font-size:.95rem;margin-bottom:12px">Payment method</h3>
+          <div class="pay-methods">
+            <div class="pay-method selected" data-pay-method="gcash">GCash</div>
+            <div class="pay-method" data-pay-method="maya">Maya</div>
+            <div class="pay-method" data-pay-method="cash">Cash on pick-up</div>
+          </div>
+          <div id="gcashPanel" style="background:var(--surface-2);border-radius:var(--radius-sm);padding:18px;margin-bottom:20px">
+            <p style="margin-bottom:4px;font-size:.85rem;color:var(--text-mute)">Send payment to</p>
+            <p style="font-family:var(--font-head);font-size:1.2rem;color:var(--heading);margin-bottom:2px">0917-555-1234</p>
+            <p style="margin-bottom:16px;font-size:.85rem">GCash &middot; UniQueue Registrar</p>
+            <div class="field" style="margin-bottom:0">
+              <label for="referenceNumber">Reference number</label>
+              <input type="text" id="referenceNumber" placeholder="13-digit reference no.">
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" id="confirmPaymentBtn">Confirm &amp; Get Queue Number</button>
+        </div>
+      </div>
+      <div class="request-step" id="reqStep4">
+        <div class="card ticket-result">
+          <div class="check">&#10003;</div>
+          <p style="text-transform:uppercase;font-size:.78rem;font-weight:700;color:var(--text-mute);letter-spacing:.04em">Your queue number</p>
+          <div class="qnum" id="finalQueueNumber">066</div>
+          <p id="finalDocName" style="color:var(--heading);font-weight:600">Certificate of Grades</p>
+          <p style="font-size:.85rem" id="finalPickup">Mon, Jul 28 &middot; 10:00 AM</p>
+          <button class="btn btn-ghost" id="newRequestBtn" style="margin-top:18px">Request Another Document</button>
+        </div>
+      </div>
+    </section>
+    <section class="dash-view" id="viewSchedule">
+      <div class="card table-card">
+        <p style="margin-bottom:20px">See how many students are booked per day and time slot.</p>
+        <div class="calendar-days">
+          <div class="day-card selected" data-cal-day="Mon">
+            <strong>Mon</strong><span>28 total</span>
+          </div>
+          <div class="day-card" data-cal-day="Tue">
+            <strong>Tue</strong><span>42 total</span>
+          </div>
+          <div class="day-card" data-cal-day="Wed">
+            <strong>Wed</strong><span>55 total</span>
+          </div>
+          <div class="day-card" data-cal-day="Thu">
+            <strong>Thu</strong><span>13 total</span>
+          </div>
+          <div class="day-card" data-cal-day="Fri">
+            <strong>Fri</strong><span>32 total</span>
+          </div>
+        </div>
+        <h3 style="font-size:.95rem;margin-bottom:14px"><span id="scheduleDayLabel">Mon</span> &middot; students per time slot</h3>
+        <div id="scheduleBars"></div>
+      </div>
+    </section>
+    <section class="dash-view" id="viewReceipts">
+      <div class="card" style="padding:26px 28px">
+        <div class="data-table-wrap">
+          <table class="data-table" id="receiptsTable">
+            <caption>Payment history &middot; AY 2025&ndash;2026</caption>
+            <thead>
+              <tr>
+                <th class="sortable" data-sort-key="document">Document &#8645;</th>
+                <th class="sortable" data-sort-key="date">Date &#8645;</th>
+                <th>Reference</th>
+                <th>Queue #</th>
+                <th class="num sortable" data-sort-key="amount">Amount &#8645;</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Document" data-value="Transcript of Records">Transcript of Records</td>
+                <td data-label="Date" data-value="2026-07-18">Jul 18, 2026</td>
+                <td data-label="Reference">REF-847291</td>
+                <td data-label="Queue #">#064</td>
+                <td class="num" data-label="Amount" data-value="150">&#8369;150.00</td>
+                <td data-label="Status"><span class="badge badge-green">Paid</span></td>
+              </tr>
+              <tr>
+                <td data-label="Document" data-value="Certificate of Grades">Certificate of Grades</td>
+                <td data-label="Date" data-value="2026-06-03">Jun 3, 2026</td>
+                <td data-label="Reference">REF-623015</td>
+                <td data-label="Queue #">#022</td>
+                <td class="num" data-label="Amount" data-value="50">&#8369;50.00</td>
+                <td data-label="Status"><span class="badge badge-green">Paid</span></td>
+              </tr>
+              <tr>
+                <td data-label="Document" data-value="Certificate of Registration">Certificate of Registration</td>
+                <td data-label="Date" data-value="2026-03-12">Mar 12, 2026</td>
+                <td data-label="Reference">REF-519837</td>
+                <td data-label="Queue #">#011</td>
+                <td class="num" data-label="Amount" data-value="50">&#8369;50.00</td>
+                <td data-label="Status"><span class="badge badge-green">Paid</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">Total paid (AY 2025&ndash;2026)</td>
+                <td class="num">&#8369;250.00</td>
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
