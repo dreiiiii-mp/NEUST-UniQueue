@@ -2,15 +2,6 @@ function byId(id) {
   return document.getElementById(id);
 }
 
-function initNavToggle() {
-  var toggle = byId("navToggle");
-  var links = byId("navLinks");
-  if (!toggle || !links) return;
-  toggle.addEventListener("click", function () {
-    links.classList.toggle("open");
-  });
-}
-
 function initScrollHeader() {
   var header = document.querySelector(".topnav");
   if (!header) return;
@@ -36,7 +27,7 @@ function initFeatureTabs() {
       tab.classList.add("active");
       byId(target).classList.add("active");
     });
-  });S
+  });
 }
 
 function initTabLinks() {
@@ -82,17 +73,72 @@ function initLoginForm() {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var idOk = validateField(idInput, "Enter your student ID number.");
-    var idPattern = /^\d{4}-\d{5}$/;
+    var idPattern = /^SUM\d{4}-\d{5}$/i;
     if (idOk && !idPattern.test(idInput.value.trim())) {
       idInput.closest(".field").classList.add("has-error");
       idInput.closest(".field").querySelector(".error-msg").textContent =
-        "Use the format 2024-00123.";
+        "Use the format SUM2025-00001.";
       idOk = false;
     }
     var passOk = validateField(passInput, "Enter your password.");
     if (idOk && passOk) {
       window.location.href = "dashboard.html";
     }
+  });
+}
+
+function initFeedbackForm() {
+  var form = byId("feedbackForm");
+  if (!form) return;
+  var messageInput = byId("feedbackMessage");
+  var messageField = messageInput.closest(".field");
+  var messageError = byId("feedbackMessageError");
+
+  messageInput.addEventListener("input", function () {
+    if (messageInput.value.trim()) {
+      messageField.classList.remove("has-error");
+      messageError.textContent = "";
+    }
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var name = byId("feedbackName").value.trim();
+    var email = byId("feedbackEmail").value.trim();
+    var topic = byId("feedbackTopic").value;
+    var message = messageInput.value.trim();
+    var status = byId("feedbackStatus");
+
+    if (!message) {
+      messageField.classList.add("has-error");
+      messageError.textContent = "Please enter your feedback before submitting.";
+      status.textContent = "";
+      messageInput.focus();
+      return;
+    }
+
+    messageField.classList.remove("has-error");
+    messageError.textContent = "";
+    var body = [
+      "Feedback topic: " + topic,
+      "Name: " + (name || "Not provided"),
+      "Reply email: " + (email || "Not provided"),
+      "",
+      message,
+    ].join("\n");
+    var mailto =
+      "mailto:registrar@neust.edu.ph?subject=" +
+      encodeURIComponent("NEUST UniQueue feedback") +
+      "&body=" +
+      encodeURIComponent(body);
+    var link = document.createElement("a");
+
+    link.href = mailto;
+    link.textContent = "Open prefilled email draft";
+    status.textContent =
+      "Your feedback is ready in an email draft. It has not been sent yet.";
+    status.appendChild(document.createElement("br"));
+    status.appendChild(link);
   });
 }
 
@@ -466,12 +512,12 @@ function initKiosk() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  initNavToggle();
   initScrollHeader();
   initFeatureTabs();
   initTabLinks();
   initLiveQueue();
   initLoginForm();
+  initFeedbackForm();
   initDashboardNav();
   initDocumentPicker();
   initDateTimePicker();
