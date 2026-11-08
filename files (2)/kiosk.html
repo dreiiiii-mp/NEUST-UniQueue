@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walk-in Kiosk — NEUST UniQueue</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="kiosk-shell">
-  <div class="kiosk-panel">
-    <div class="kiosk-view active" id="kioskView1">
-      <span class="brand-mark" style="margin:0 auto 16px">N</span>
-      <h1 style="margin-bottom:6px">Walk-in Queue</h1>
-      <p>Tap the document you need to get a queue number.</p>
-      <div class="kiosk-doc-grid">
-        <button class="kiosk-doc-btn" data-kiosk-doc data-kiosk-name="Certificate of Grades" data-kiosk-fee="50.00">
-          <strong>Certificate of Grades</strong>
-          <span>&#8369;50.00 &middot; 3 days</span>
-        </button>
-        <button class="kiosk-doc-btn" data-kiosk-doc data-kiosk-name="Certificate of Registration" data-kiosk-fee="50.00">
-          <strong>Certificate of Registration</strong>
-          <span>&#8369;50.00 &middot; 1 day</span>
-        </button>
-        <button class="kiosk-doc-btn" data-kiosk-doc data-kiosk-name="Transcript of Records" data-kiosk-fee="150.00">
-          <strong>Transcript of Records</strong>
-          <span>&#8369;150.00 &middot; 5 days</span>
-        </button>
-        <button class="kiosk-doc-btn" data-kiosk-doc data-kiosk-name="Certificate of Enrollment" data-kiosk-fee="50.00">
-          <strong>Certificate of Enrollment</strong>
-          <span>&#8369;50.00 &middot; 1 day</span>
-        </button>
-      </div>
-      <button class="btn btn-primary btn-block" id="kioskContinue" disabled>Continue</button>
-    </div>
-    <div class="kiosk-view" id="kioskView2">
-      <h1 style="margin-bottom:20px">Confirm your request</h1>
-      <div class="card" style="padding:20px;text-align:left;margin-bottom:24px">
-        <div class="flex-between" style="margin-bottom:8px">
-          <span style="color:var(--text-mute)">Document</span>
-          <strong id="kioskSelectedDoc">&mdash;</strong>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Walk-in Kiosk — NEUST UniQueue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+  <div class="kiosk-shell">
+    <div class="kiosk-panel">
+      <div class="kiosk-view active" id="kioskView1">
+        <span class="brand-mark" style="margin:0 auto 16px">N</span>
+        <h1 style="margin-bottom:6px">Walk-in Queue</h1>
+        <p>Tap the document you need to get a queue number.</p>
+        <div class="kiosk-doc-grid">
+          <button class="kiosk-doc-btn" data-kiosk-doc data-kiosk-name="Certificate of Grades" data-kiosk-fee="50.00">
+            <strong>Certificate of Grades</strong>
+            <span>&#8369;50.00 &middot; 3 days</span>
+          </button>
+          <button class="kiosk-doc-btn" data-kiosk-doc data-kiosk-name="Certificate of Registration" data-kiosk-fee="50.00">
+            <strong>Certificate of Registration</strong>
+            <span>&#8369;50.00 &middot; 1 day</span>
+          </button>
+          <button class="kiosk-doc-btn" data-kiosk-doc data-kiosk-name="Transcript of Records" data-kiosk-fee="150.00">
+            <strong>Transcript of Records</strong>
+            <span>&#8369;150.00 &middot; 5 days</span>
+          </button>
+          <button class="kiosk-doc-btn" data-kiosk-doc data-kiosk-name="Certificate of Enrollment" data-kiosk-fee="50.00">
+            <strong>Certificate of Enrollment</strong>
+            <span>&#8369;50.00 &middot; 1 day</span>
+          </button>
         </div>
-        <div class="flex-between">
-          <span style="color:var(--text-mute)">Fee, payable at pick-up</span>
-          <strong id="kioskSelectedFee">&mdash;</strong>
-        </div>
+        <button class="btn btn-primary btn-block" id="kioskContinue" disabled>Continue</button>
       </div>
-      <button class="btn btn-primary btn-block" id="kioskConfirm">Get My Queue Number</button>
-    </div>
-    <div class="kiosk-view" id="kioskView3">
-      <div class="check" style="margin:0 auto 18px">&#10003;</div>
-      <p style="text-transform:uppercase;font-size:.78rem;font-weight:700;color:var(--text-mute);letter-spacing:.04em">Your queue number</p>
-      <div class="qnum" id="kioskQueueNumber">070</div>
-      <p>Please have a seat. Watch the screen for your number.</p>
-      <button class="btn btn-ghost" id="kioskRestart" style="margin-top:14px">Start Over</button>
+      <div class="kiosk-view" id="kioskView2">
+        <h1 style="margin-bottom:20px">Confirm your request</h1>
+        <div class="card" style="padding:20px;text-align:left;margin-bottom:24px">
+          <div class="flex-between" style="margin-bottom:8px">
+            <span style="color:var(--text-mute)">Document</span>
+            <strong id="kioskSelectedDoc">&mdash;</strong>
+          </div>
+          <div class="flex-between">
+            <span style="color:var(--text-mute)">Fee, payable at pick-up</span>
+            <strong id="kioskSelectedFee">&mdash;</strong>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block" id="kioskConfirm">Get My Queue Number</button>
+      </div>
+      <div class="kiosk-view" id="kioskView3">
+        <div class="check" style="margin:0 auto 18px">&#10003;</div>
+        <p style="text-transform:uppercase;font-size:.78rem;font-weight:700;color:var(--text-mute);letter-spacing:.04em">Your queue number</p>
+        <div class="qnum" id="kioskQueueNumber">070</div>
+        <p>Please have a seat. Watch the screen for your number.</p>
+        <button class="btn btn-ghost" id="kioskRestart" style="margin-top:14px">Start Over</button>
+      </div>
     </div>
   </div>
-</div>
-<script src="script.js"></script>
-</body>
+  <script src="script.js"></script>
+  </body>
 </html>

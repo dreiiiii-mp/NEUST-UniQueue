@@ -1,113 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard — NEUST UniQueue</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dashboard — NEUST UniQueue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<div class="dash-shell">
-  <aside class="dash-side">
-    <a href="index.html" class="brand">
-      <span class="brand-mark">N</span>
-      <span>NEUST UniQueue<span class="sub">Queue System</span></span>
-    </a>
-    <button class="dash-menu-toggle" id="dashMenuToggle" type="button" aria-expanded="false" aria-controls="dashNav">
-      <span aria-hidden="true">&#9776;</span> Menu
-    </button>
-    <ul class="dash-nav" id="dashNav">
-      <li>
-          <button class="active" data-view="viewProfile"><span class="ico">&#9679;</span> Profile</button>
-      </li>
-      <li>
-        <button data-view="viewId"><span class="ico">&#9635;</span> School ID</button>
-      </li>
-      <li>
-        <button data-view="viewRequest"><span class="ico">&#9998;</span> Request Document</button>
-      </li>
-      <li>
-        <button data-view="viewSchedule"><span class="ico">&#9783;</span> Schedule Calendar</button>
-      </li>
-      <li>
-        <button data-view="viewReceipts"><span class="ico">&#8801;</span> Receipts</button>
-      </li>
+<body>
+  <div class="dash-shell">
+    <aside class="dash-side">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">N</span>
+          <span>NEUST UniQueue<span class="sub">Queue System</span></span>
+      </a>
+  <button class="dash-menu-toggle" id="dashMenuToggle" type="button" aria-expanded="false" aria-controls="dashNav">
+    <span aria-hidden="true">&#9776;</span> Menu </button>
+  <ul class="dash-nav" id="dashNav">
+    <li>
+        <button class="active" data-view="viewProfile"><span class="ico">&#9679;</span> Profile</button>
+    </li>
+    <li>
+      <button data-view="viewId"><span class="ico">&#9635;</span> School ID</button>
+    </li>
+    <li>
+      <button data-view="viewRequest"><span class="ico">&#9998;</span> Request Document</button>
+    </li>
+    <li>
+      <button data-view="viewSchedule"><span class="ico">&#9783;</span> Schedule Calendar</button>
+    </li>
+    <li>
+      <button data-view="viewReceipts"><span class="ico">&#8801;</span> Receipts</button>
+    </li>
     </ul>
-    <div class="dash-user">
-      <div class="avatar">J</div>
+  <div class="dash-user">
+    <div class="avatar">J</div>
       <div>
         <strong>Juan dela Cruz</strong>
-        <span>SUM2025-00001 &middot; BSIT 2</span>
+          <span>SUM2025-00001 &middot; BSIT 2</span>
       </div>
     </div>
   </aside>
   <main class="dash-main">
     <div class="dash-top">
       <h1 id="dashTitle">Profile</h1>
-      <div class="queue-badge">
-        <span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--green)"></span> Now serving <span class="num" data-queue-now>047</span>
+        <div class="queue-badge">
+          <span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--green)"></span> Now serving <span class="num" data-queue-now>047</span>
       </div>
     </div>
     <section class="dash-view active" id="viewProfile">
       <div class="card info-card">
         <div class="info-card-head">
           <div class="avatar">J</div>
-          <div>
-            <h2>Juan dela Cruz</h2>
-            <p>2nd Year &middot; BSIT &middot; <span class="badge badge-green">Active Enrollment</span></p>
+            <div>
+              <h2>Juan dela Cruz</h2>
+              <p>2nd Year &middot; BSIT &middot; <span class="badge badge-green">Active Enrollment</span></p>
+            </div>
           </div>
         </div>
+    <div class="card" style="padding:26px 28px">
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <caption>Personal profile</caption>
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Full name</td>
+              <td>Juan Miguel dela Cruz</td>
+            </tr>
+            <tr>
+              <td>Student ID</td>
+              <td>SUM2025-00001</td>
+            </tr>
+            <tr>
+              <td>Program</td>
+              <td>BS Information Technology</td>
+            </tr>
+            <tr>
+              <td>Year level</td>
+              <td>2nd Year</td>
+            </tr>
+            <tr>
+              <td>Section</td>
+              <td>BSIT 2-A</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>jm.delacruz@uni.edu.ph</td>
+            </tr>
+            <tr>
+              <td>Contact no.</td>
+              <td>0917-555-8821</td>
+            </tr>
+            <tr>
+              <td>Date of birth</td>
+              <td>March 14, 2005</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="card" style="padding:26px 28px">
-        <div class="data-table-wrap">
-          <table class="data-table">
-            <caption>Personal profile</caption>
-            <thead>
-              <tr>
-                <th>Field</th>
-                <th>Detail</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                  <td>Full name</td>
-                  <td>Juan Miguel dela Cruz</td>
-              </tr>
-              <tr>
-                  <td>Student ID</td>
-                  <td>SUM2025-00001</td>
-              </tr>
-              <tr>
-                  <td>Program</td>
-                  <td>BS Information Technology</td>
-              </tr>
-              <tr>
-                  <td>Year level</td>
-                  <td>2nd Year</td>
-              </tr>
-              <tr>
-                  <td>Section</td>
-                  <td>BSIT 2-A</td>
-              </tr>
-              <tr>
-                  <td>Email</td>
-                  <td>jm.delacruz@uni.edu.ph</td>
-              </tr>
-              <tr>
-                  <td>Contact no.</td>
-                  <td>0917-555-8821</td>
-              </tr>
-              <tr>
-                  <td>Date of birth</td>
-                  <td>March 14, 2005</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    </div>
     </section>
     <section class="dash-view" id="viewId">
       <div class="id-card">
